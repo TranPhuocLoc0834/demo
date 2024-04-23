@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lenonic Việt Nam | Liên hệ</title>   
+        <link rel="icon" href="../product/img/logo_icon.png" />
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+        <link rel="stylesheet" href="../product/css/product-details.css" />
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../product/js/product-details.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="navbar">
+                    <img src="../product/img/logo_icon.png" id="logo" alt />
+                    <button onclick="location.href='../html/index.html'" style="cursor: pointer;">
+                        <span
+                            class="material-symbols-outlined">home</span>Trang chủ</button>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <span
+                                class="material-symbols-outlined">package_2</span>Sản phẩm</button>
+                        <div class="dropdown-content">
+                            <ul id="menu">
+                                <li>
+                                    <a href="../html/ThietBiDienTu.html"> <span class="material-symbols-outlined">desktop_windows</span><br>Thiết bị điện tử</a>
+                                </li>
+                                <li>
+                                    <a href="../html/ThietBiNhaBep.html"><span class="material-symbols-outlined">microwave</span><br>Thiết bị nhà bếp</a>
+                                </li>
+                                <li>
+                                    <a href="../html/ThietBiGiatUI.html"><span class="material-symbols-outlined">iron</span><br>Thiết bị giặt ủi</a>
+                                </li>
+                                <li>
+                                    <a href="../html/ThietBiYTeGiaDinh.html"><span class="material-symbols-outlined">medical_services</span><br>Thiết bị y tế gia đình</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='../html/AboutUS.html'" style="cursor: pointer;"><span
+                            class="material-symbols-outlined">help</span>Về chúng tôi</button>
+                    <div class="contact">
+                        <button><span class="material-symbols-outlined">call</span>Liên hệ</button>
+                        <div class="contact-type">
+                            <ul class="contact-menu">
+                                <li><a href="../html/LienHe_Chat.html"><span class="material-symbols-outlined">chat</span>Trò chuyện trực tuyến</a></li>
+                                <li><a href="../html/LienHe_Email.html"><span class="material-symbols-outlined">mail</span>Gửi email liên hệ</a></li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="account">
+                        <button class="accountbtn">
+                            <span
+                                class="material-symbols-outlined">person</span>
+                        </button>
+                        <div class="account-nav">
+                            <ul class="acccount-menu">
+                                <li><a onclick="openModal2()"><span class="material-symbols-outlined">person_add</span>Đăng ký</a></li>
+                                <li><a onclick="openModal1()" ><span class="material-symbols-outlined">login</span>Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <button class="searchbtn" onclick="openSearch()"
+                            style="cursor: pointer">
+                            <span
+                                class="material-symbols-outlined">search</span>
+                        </button>
+                        <div class="dropdown-seacrh" id="dropsearch">
+                            <ul id="search-base">
+                                <span class="material-symbols-outlined"
+                                    id="icon">search</span>
+                                <input type="text" placeholder="search here..."
+                                    id="searchbar" onclick="AnimatedSearchBar()"
+                                    autocomplete="off" />
+                                <span class="material-symbols-outlined" id="reset-search" style="cursor: pointer;" onclick="resetSearch()">
+                                    refresh
+                                </span>
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 30px; cursor: pointer; float: right;" id="close-search"
+                                    onclick="closeSearch()">close</span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumbs">
+                    <span>Sản phẩm</span> >
+                    <span>Thiết bị điện tử</span> >
+                    <li><a href="#">Tên sản phẩm</a></li>
+                </div>
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="" >
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="../product/img/logo_icon.png" alt="Avatar" class="avatar">
+                      </div>
+                  
+                      <div class="modal-container">
+                        <label for="uname"><b>Tên đăng nhập</b></label>
+                        <input type="text" placeholder="Nhập tên đăng nhập" name="uname"  required>
+                  
+                        <label for="psw"><b>Mật khẩu</b></label>
+                        <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                          
+                        <button type="submit">Đăng nhập</button>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+                        </label>
+                      </div>
+                  
+                      <div class="modal-container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
+                        <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="id02" class="modal">
+                    <form class="modal-content animate" action="" id="registrationForm" >
+                      <div class="imgcontainer">
+                        <span onclick="closeAndReset()" class="close" title="Close Modal">&times;</span>
+                        <img src="../product/img/logo_icon.png" alt="Avatar" class="avatar">
+                      </div>                 
+                      <div class="modal-container">
+                        <label for="uname"><b>Tên đăng nhập </b></label><span style="color: red;">*</span>
+                        <input type="text" placeholder="Nhập tên đăng nhập" name="uname" id="username" required>
+                        <span id="regExName"></span><br>
+                        <label for="uname"><b>Địa chỉ email </b></label><span style="color: red;">*</span>
+                        <input type="text" placeholder="Nhập địa chỉ email" name="uname" id="email" required>
+                        <span id="regExEmail"></span><br>
+                        <label for="uname"><b>Số điện thoại </b></label><span style="color: red;">*</span>
+                        <input type="text" placeholder="Nhập số điện thoại" name="uname" id="phoneNum" required>
+                        <span id="regExPhone"></span><br>
+                        <label for="psw"><b>Mật khẩu </b></label><span style="color: red;">*</span>
+                        <input type="password" placeholder="Nhập mật khẩu" name="psw" id="password" required>
+                        <span id="regExPassword"></span><br>
+                        <label for="psw"><b>Nhập lại Mật khẩu</b></label>
+                        <input type="password" placeholder="Nhập lại mật khẩu" name="psw" id="checkpassword" required>       
+                        <span id="confirmPassword"></span><br>         
+                        <button type="submit">Đăng ký</button>
+                      </div>
+                      <div class="modal-container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="closeAndReset()" class="cancelbtn">Hủy</button>
+                      </div>
+                    </form>
+                  </div>
+            </header>
+            <main>
+                <section>
+                    <div class="product-container">
+                        <div class="product-details">
+                            <div class="product-img">
+                                <div class="product-pic">
+                                    <img data-imgbigurl="../img/productbanner1.jpg" src="../img/productbanner1.jpg" alt="" style="width: 650px;height: 500px;cursor: pointer;">
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>LEONIC OLED TV 13 PRO</h3>
+                                <div class="product-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                    <span>(18)</span>
+                                </div>
+                                <div class="product-details-price">5,000,000 VND</div>
+                                <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
+                                    vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
+                                    quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+                                <div class="product-quantity">
+                                    <div class="quantity">
+                                            <label for="quantity">Số lượng</label>
+                                            <input type="number" min="1"  max="100" name="quantity" value="1" style="width: 55px; text-align: center;">
+                                            <button href="#" class="primary-btn">MUA NGAY</button>
+                                    </div>
+                                </div>
+                                <div class="product-atrb">
+                                    <p style="font-weight: bold;">Thông số và trình trạng sản phẩm</p>
+                                <ul>
+                                    <li><b>Tình trạng:</b> <span>vẫn còn hàng</span></li>
+                                    <li><b>Thời gian giao hàng dự kiến:</b> <span>01 ngày<samp></samp></span></li>
+                                    <li><b>Trọng lượng thiết bị:</b> <span>3 kg</span></li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="tab-content">
+                            <div class="tab-pane">
+                                <div class="product-details-tab">
+                                    <h3>[Tên Sản Phẩm]</h3>
+                                    <p>[Tên Sản Phẩm] là giải pháp lý tưởng cho [đối tượng khách hàng], mang lại [lợi ích chính] với thiết kế [đặc điểm nổi bật của thiết kế]. Sản phẩm này phù hợp với [đối tượng sử dụng] và là sự kết hợp hoàn hảo giữa [đặc điểm kỹ thuật] và [đặc điểm thẩm mỹ].</p>
+                                    <h4>Tính năng nổi bật:</h4>
+                                    <p><strong>[Tính năng 1]:</strong> [Mô tả ngắn gọn về tính năng].</p>
+                                    <p><strong>[Tính năng 2]:</strong> [Mô tả ngắn gọn về tính năng].</p>
+                                    <p><strong>[Tính năng 3]:</strong> [Mô tả ngắn gọn về tính năng].</p>
+                                    <p><strong>[Tính năng 4]:</strong> [Mô tả ngắn gọn về tính năng].</p>
+                                    <p><strong>[Tính năng 5]:</strong> [Mô tả ngắn gọn về tính năng].</p>
+                                    <h4>Thông số kỹ thuật:</h4>
+                                    <p><strong>Lực hút:</strong> [Thông số]</p>
+                                    <p><strong>Dung tích hộp chứa bụi:</strong> [Thông số]</p>
+                                    <p><strong>Độ ồn:</strong> [Thông số]</p>
+                                    <p><strong>Kích thước:</strong> [Thông số]</p>
+                                    <p><strong>Trọng lượng:</strong> [Thông số]</p>
+                                    <p><strong>Pin:</strong> [Thông số]</p>
+                                    <p><strong>Thời gian sạc:</strong> [Thông số]</p>
+                                    <p><strong>Thời gian hoạt động:</strong> [Thông số]</p>                          
+                                    <p><strong>Giá tham khảo:</strong> [Giá]</p>
+                                    <p>[Tên Sản Phẩm] không chỉ là một [loại sản phẩm], mà còn là một phần không thể thiếu của [lĩnh vực liên quan], giúp [đối tượng khách hàng] [lợi ích cụ thể]. Sở hững ngay để [lời kêu gọi hành động].</p>
+                                </div>
+                            </div>
+                            <h3>Đánh giá sản phẩm</h3>
+                            <div id="comment-section">
+                                <div class="star-rating">
+                                    <span class="fa fa-star-o" data-rating="1"></span>
+                                    <span class="fa fa-star-o" data-rating="2"></span>
+                                    <span class="fa fa-star-o" data-rating="3"></span>
+                                    <span class="fa fa-star-o" data-rating="4"></span>
+                                    <span class="fa fa-star-o" data-rating="5"></span>
+                                    <input type="hidden" name="whatever" class="rating-value" value="0">
+                                    <script>
+                                        var stars = document.querySelectorAll('.star-rating .fa');
+                                        for (var i = 0; i < stars.length; i++) {
+                                        stars[i].addEventListener('click', (function(i) {
+                                            return function() {
+                                            var current_star_level = i + 1;
+                                            var star_rating_input = document.querySelector('.star-rating .rating-value');
+                                            star_rating_input.value = current_star_level; // Cập nhật giá trị đánh giá
+                                            updateStars(current_star_level); // Cập nhật giao diện sao
+                                            }
+                                        })(i));
+                                        }
+
+                                        function updateStars(rating) {
+                                        var stars = document.querySelectorAll('.star-rating .fa');
+                                        for (var i = 0; i < stars.length; i++) {
+                                            if (i < rating) {
+                                            stars[i].classList.remove('fa-star-o');
+                                            stars[i].classList.add('fa-star');
+                                            } else {
+                                            stars[i].classList.remove('fa-star');
+                                            stars[i].classList.add('fa-star-o');
+                                            }
+                                        }
+                                        }
+                                    </script>
+                                </div>
+                                
+                                <div id="comments-container"></div>
+                                <textarea id="comment-box" placeholder="Nhập đánh giá của bạn..."></textarea>
+                                <button id="submit-btn">Đánh giá</button>
+                            </div>
+                            <script>
+                                postComment();
+                            </script>
+                        </div>
+                    </div>
+                    <div class="product-slideshow">
+                        <h3>Sản phẩm khác</h3>
+                        <div class="slideshow">
+                            <button class="customPrevBtn"><span class="material-symbols-outlined" style="font-size: 60px;">chevron_left</span></button>
+                            <div class="owl-carousel">
+                                <img src="../img/product6.jpg" alt="Slide 1" onclick="location.href='../product/product6.html'">
+                                <img src="../img/product2.jpg" alt="Slide 2" onclick="location.href='../product/product2.html'">
+                                <img src="../img/product3.jpg" alt="Slide 3" onclick="location.href='../product/product3.html'">
+                                <img src="../img/product4.jpg" alt="Slide 4" onclick="location.href='../product/product4.html'"> 
+                                <img src="../img/product5.jpg" alt="Slide 5" onclick="location.href='../product/product5.html'">                  
+                            </div>
+                            <button class="customNextBtn"><span class="material-symbols-outlined" style="font-size: 60px;">chevron_right</span></button>
+                        </div>
+                    </div>   
+                </section>
+                <section>
+                    <h2 align="center">BỘ PHẬN HỖ TRỢ</h2>
+                    <div id="support" align="center">
+                        <a href="../html/ChamSocKH.html">
+                            <span class="material-symbols-outlined">contacts</span><br>
+                            <p>Chăm sóc khách hàng</p>
+                            <small >Liên hệ với chúng tôi qua kênh chat, email và hotline</small>
+                        </a>
+                        <a href="../html/BaoHanh.html">
+                            <span class="material-symbols-outlined">construction</span><br>
+                            <p>Dịch vụ bảo hành</p>
+                            <small >Leonic đang có 5 trung tâm bảo hành tại TP.HCM</small>
+                        </a>
+                        <a href="../html/FAQ.html">
+                            <span class="material-symbols-outlined">quiz</span><br>
+                            <p>FAQ</p>
+                            <small >Giải đáp thắc mắc bằng câu hỏi thường gặp</small>
+                        </a> 
+                    </div>
+                </section>         
+                <script>
+                    (function (w, d, s, o, f, js, fjs) {
+                      w["botsonic_widget"] = o;
+                      w[o] =
+                        w[o] ||
+                        function () {
+                          (w[o].q = w[o].q || []).push(arguments);
+                        };
+                      (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                      js.id = o;
+                      js.src = f;
+                      js.async = 1;
+                      fjs.parentNode.insertBefore(js, fjs);
+                    })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+                    Botsonic("init", {
+                      serviceBaseUrl: "https://api-azure.botsonic.ai",
+                      token: "4439388c-a189-4617-98be-f7ee68d8c453",
+                    });
+                </script>
+            </main>
+            <footer>
+                <div class="footer-container">
+                    <img src="../product/img/logo_icon.png" alt="" align="center" style="width: 400px; height: 400px; margin-left: -10px;">
+                    <div class="footer-section">
+                        <h3> Về Leonic</h3>
+                        <p>Chúng tôi cung cấp các sản phẩm thiết bị gia đình chất lượng cao, đáng tin cậy và tiết kiệm năng lượng.</p>
+                        <p>Leonic tự hào là thương hiệu hàng đầu về thiết bị gia đình với hơn 10 năm kinh nghiệm. Chúng tôi cam kết mang đến cho khách hàng những sản phẩm tốt nhất với giá cả phải chăng.</p>
+                        <p>Đến với Leonic, bạn sẽ được trải nghiệm dịch vụ chăm sóc khách hàng tận tâm và chuyên nghiệp. Chúng tôi luôn sẵn lòng giải đáp mọi thắc mắc và hỗ trợ khách hàng một cách nhanh chóng.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Liên hệ</h3>
+                        <p>Địa chỉ: 123 Đường Lê Lợi, Quận 1, TP.HCM</p>
+                        <p>Email: info@leonic.com</p>
+                        <p>Điện thoại: (028) 1234 5678</p>
+                    </div>
+                    <div class="footer-section" id="svcAndProduct">
+                        <h3>Dịch vụ</h3>
+                        <a href="../html/ChamSocKH.html">Chăm sóc khách hàng</a>
+                        <a href="../html/BaoHanh.html">Dịch vụ bảo hành </a>
+                        <a href="../html/FAQ.html">FAQ</a>
+                        <a href="../html/sitemap.html">Sitemap</a>
+                        <h3>Sản phẩm</h3>
+                        <a href="../html/ThietBiDienTu.html">Thiết bị điện tử</a>
+                        <a href="../html/ThietBiNhaBep.html">Thiết bị nhà bếp</a>
+                        <a href="../html/ThietBiGiatUI.html">Thiết bị giặt ủi</a>
+                        <a href="../html/ThietBiYTeGiaDinh.html">Thiết bị y tế gia đình</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <a href="https://twitter.com/?lang=vi"><i class="fa fa-twitter" id="icon" style="font-size:40px"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" id="icon" style="font-size:40px; padding: 5px 12px;"></i></a>
+                        <a href="https://www.amazon.com/"><i class="fa fa-amazon" id="icon" style="font-size: 40px;"></i></a>
+                        <div>
+                            <h3>Phương thức thanh toán</h3>
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa" style="font-size: 70px;" ></i>
+                                <i class="fab fa-cc-mastercard" style="font-size: 70px;"></i>
+                                <i class="fab fa-cc-paypal" style="font-size: 70px;"></i>
+                                <i class="fab fa-cc-amazon-pay" style="font-size: 70px;"></i>
+                                <i class="fab fa-cc-apple-pay" style="font-size: 70px;"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2024 Leonic. All rights reserved.</p>
+                </div>
+            </footer>
+        </div> 
+    <script>
+        $(document).ready(function(){
+        var owl = $(".owl-carousel");
+        owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true, 
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true, 
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+            items: 1
+            },
+            600: {
+            items: 3
+            },
+            1000: {
+            items: 5
+            }
+        }
+        });
+        $(".customPrevBtn").click(function() {
+            owl.trigger('stop.owl.autoplay');
+            owl.trigger('prev.owl.carousel');
+            setTimeout(function(){
+                owl.trigger('play.owl.autoplay');
+            },1000);
+        });
+        $(".customNextBtn").click(function() {
+            owl.trigger('stop.owl.autoplay');
+            owl.trigger('next.owl.carousel');
+            setTimeout(function(){
+                owl.trigger('play.owl.autoplay');
+            },1000);
+        });
+    });
+    </script>
+    </body>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var phoneNum = document.getElementById('phoneNum').value;
+    var checkPassword = document.getElementById('checkpassword').value;
+    var usernameRegex = /^[a-zA-Z0-9_-]{3,15}$/;
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    var phoneNumRegex = /^[0-9]{10,}$/;
+    if (!usernameRegex.test(username)) {
+        document.getElementById("regExName").style="color: red";
+        document.getElementById("regExName").innerHTML='Tên đăng nhập không hợp lệ. Chỉ chấp nhận chữ cái, số, gạch dưới và gạch ngang, từ 3 đến 15 ký tự.';
+        return;
+    } else {
+        document.getElementById("regExName").innerHTML='<span class="material-symbols-outlined">done </span>';
+        document.getElementById('regExName').style="color:green";
+    }
+    if (!emailRegex.test(email)) {
+        document.getElementById("regExEmail").style="color: red";
+        document.getElementById("regExEmail").innerHTML='Email không hợp lệ. Vui lòng nhập đúng định dạng email.';
+        return;
+    } 
+    else {
+        document.getElementById("regExEmail").innerHTML='<span class="material-symbols-outlined">done </span>';
+        document.getElementById('regExEmail').style="color:green";
+    }
+    if (!phoneNumRegex.test(phoneNum)) {
+        document.getElementById("regExPhone").style="color: red";
+        document.getElementById("regExPhone").innerHTML='Số điện thoại không hợp lệ, phải là số và có ít nhất 10 số';
+        return;
+    }else {
+        document.getElementById("regExPhone").innerHTML='<span class="material-symbols-outlined">done </span>';
+        document.getElementById('regExPhone').style="color:green";
+    }
+    if (!passwordRegex.test(password)) {
+        document.getElementById("regExPassword").style="color: red";
+        document.getElementById("regExPassword").innerHTML='Mật khẩu không hợp lệ. Phải có ít nhất 8 ký tự, bao gồm chữ cái và số.';
+        return;
+    } 
+    else {
+        document.getElementById("regExPassword").innerHTML='<span class="material-symbols-outlined">done </span>';
+        document.getElementById('regExPassword').style="color:green";
+    }
+    if (password != checkPassword) {
+        document.getElementById("confirmPassword").style="color: red";
+        document.getElementById("confirmPassword").innerHTML='Mật khẩu không trùng khớp';
+        return;
+    }else {
+        document.getElementById("confirmPassword").innerHTML='<span class="material-symbols-outlined">done </span>';
+        document.getElementById('confirmPassword').style="color:green";
+    }
+    localStorage.setItem('userData', JSON.stringify({ username, email, password }));
+    alert('Thông tin đăng ký đã được lưu trữ.');
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var overlay = document.createElement('div');
+  overlay.id = 'overlay';
+  document.body.appendChild(overlay);
+  var imgElements = document.querySelectorAll('img[data-imgbigurl]');
+  imgElements.forEach(function(img) {
+    img.addEventListener('click', function() {
+      var bigUrl = img.getAttribute('data-imgbigurl');
+      var imgBig = document.createElement('img');
+      imgBig.src = bigUrl;
+      imgBig.id = 'imgBig';
+      imgBig.style = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);';
+      overlay.appendChild(imgBig);
+      overlay.style.display = 'block';
+    });
+  });
+
+  overlay.addEventListener('click', function() {
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+  });
+});
+
+</script>
+</html>
